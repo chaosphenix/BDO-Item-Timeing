@@ -1,0 +1,30 @@
+
+
+input {
+  padding: 10px;
+  text-align: center;
+}
+
+#itemalert{
+  margin-top: 20px;
+}
+
+#itemalert div{
+  width: 180px;
+  display: table-cell;
+  text-align: center;
+}
+
+.rowitem{
+  border: 1px solid;
+  padding: 10px;
+  display: block !important;
+  width: 600px !important;
+  margin-top: 10px;
+}
+
+
+.nowready{
+  background-color: #ff7c72;
+  border-color: red;
+}

@@ -1,5 +1,9 @@
 
 
+body {
+  /* background-color: black; */
+}
+
 input {
   padding: 10px;
   text-align: center;
@@ -16,6 +20,7 @@ input {
 }
 
 .rowitem{
+  background-color: white;
   border: 1px solid;
   padding: 10px;
   display: block !important;
@@ -28,3 +33,40 @@ input {
   background-color: #ff7c72;
   border-color: red;
 }
+
+
+#bosstime{
+  position: fixed;
+  /* bottom: 0px; */
+  /* border: 3px solid; */
+  /* background-color: white; */
+}
+
+.timeboss{
+  font-size: 40px;
+  padding: 0px;
+  width: 150px;
+}
+
+.hilight{
+  background-color: #ff7c72;
+}
+
+
+.flip-clock-wrapper ul {width: 25px;height: 30px;margin: 0 2px; padding: 0px;}
+.flip-clock-wrapper ul li {line-height: 30px;}
+.flip-clock-wrapper ul li a div div.inn {border-radius: 3px;font-size: 20px;}
+.flip-clock-wrapper ul li a div.down {border-bottom-left-radius: 3px; border-bottom-right-radius: 3px;}
+.flip-clock-divider {
+  height: 30px;
+}
+.clock .flip-clock-wrapper{
+  height: 30px;
+}
+.flip-clock-dot.top{
+  top: 4px;
+}
+.flip-clock-dot.bottom{
+  bottom: 0px;
+}
+/* .flip-clock-wrapper ul li a div.up:after {top: 38px;height: 2px;} */

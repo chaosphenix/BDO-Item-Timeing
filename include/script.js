@@ -28,8 +28,16 @@ var closerow = (id) => {
   data.splice(nowarray, 1);
 }
 
+var clock;
 
 $(() => {
+
+  var clock = $('.clock').FlipClock({
+		clockFace: 'TwentyFourHourClock'
+	});
+
+
+
   $('#additemnettime').click(() => {
     item_id++;
     data.push({
@@ -71,3 +79,15 @@ $(() => {
 
   runtime();
 })
+
+
+function hilight(e) {
+  var t = $(e).parent().parent();
+  if (t.hasClass('hilight')) {
+    t.removeClass('hilight');
+  }else{
+    t.addClass('hilight');
+  }
+
+
+}

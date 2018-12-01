@@ -37,32 +37,11 @@ $(() => {
 	});
 
 
+  $( "#formadditem" ).submit(function( event ) {
+    event.preventDefault();
+    additem();
+  });
 
-  $('#additemnettime').click(() => {
-    item_id++;
-    data.push({
-      id : item_id,
-      itemname : $('#itemname').val(),
-      itemout : moment($('#itemtime').val()).add($('#nexttime').val(), 'minute').format('YYYY-MM-DD HH:mm'),
-      alert : false
-    });
-    var stringb = `
-          <div class="rowitem" id="row_id_`+item_id+`">
-            <div class="">
-              `+$('#itemname').val()+`
-            </div>
-            <div class="">
-              `+$('#itemtime').val()+`
-            </div>
-            <div class="">
-              `+moment($('#itemtime').val()).add($('#nexttime').val(), 'minute').format('YYYY-MM-DD HH:mm')+`
-            </div>
-            <div style="width: 70px;">
-              <input type="button" name="" value="close" style="display: table-cell;" onclick="closerow(`+item_id+`);">
-            </div>
-          </div>`;
-    $('#itemalert').append(stringb);
-  })
 
 
   $('#itemtime').val(moment().format('YYYY-MM-DD HH:mm'));
@@ -80,6 +59,32 @@ $(() => {
   runtime();
 })
 
+
+function additem() {
+  item_id++;
+  data.push({
+    id : item_id,
+    itemname : $('#itemname').val(),
+    itemout : moment($('#itemtime').val()).add($('#nexttime').val(), 'minute').format('YYYY-MM-DD HH:mm'),
+    alert : false
+  });
+  var stringb = `
+        <div class="rowitem" id="row_id_`+item_id+`">
+          <div class="">
+            `+$('#itemname').val()+`
+          </div>
+          <div class="">
+            `+$('#itemtime').val()+`
+          </div>
+          <div class="">
+            `+moment($('#itemtime').val()).add($('#nexttime').val(), 'minute').format('YYYY-MM-DD HH:mm')+`
+          </div>
+          <div style="width: 70px;">
+            <input type="button" name="" value="close" style="display: table-cell;" onclick="closerow(`+item_id+`);">
+          </div>
+        </div>`;
+  $('#itemalert').append(stringb);
+}
 
 function hilight(e) {
   var t = $(e).parent().parent();
